@@ -1,11 +1,11 @@
-import domdiff from 'domdiff';
+import udomdiff from 'udomdiff';
 import {State} from 'js-framework-benchmark-utils';
 import {getRow} from './utils.js';
 
 const tbody = document.querySelector('tbody');
 let rows = [].slice.call(tbody.childNodes);
 const state = State(({data, selected, select, remove}) => {
-  rows = domdiff(
+  rows = udomdiff(
     tbody,
     rows,
     data.map(item => {
@@ -20,7 +20,8 @@ const state = State(({data, selected, select, remove}) => {
       if (info.danger !== danger)
         row.classList.toggle('danger', (info.danger = danger));
       return row;
-    })
+    }),
+    o => o,
   );
 });
 

@@ -1,0 +1,39 @@
+{
+  "name": "js-framework-benchmark-udomdiff",
+  "version": "1.0.0",
+  "description": "udomdiff demo",
+  "main": "index.js",
+  "js-framework-benchmark": {
+    "frameworkVersionFromPackage": "udomdiff",
+    "frameworkHomeURL": "https://github.com/WebReflection/udomdiff",
+    "issues": [
+      772
+    ]
+  },
+  "scripts": {
+    "build-dev": "rollup -c -w",
+    "build-prod": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krausest/js-framework-benchmark.git"
+  },
+  "keywords": [
+    "udomdiff"
+  ],
+  "author": "Mathis Zeiher",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/krausest/js-framework-benchmark/issues"
+  },
+  "homepage": "https://github.com/krausest/js-framework-benchmark#readme",
+  "dependencies": {
+    "js-framework-benchmark-utils": "0.2.5",
+    "udomdiff": "^1.1.0"
+  },
+  "devDependencies": {
+    "rollup": "^2.0.6",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.3.0"
+  }
+}
